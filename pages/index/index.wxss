@@ -1,0 +1,58 @@
+/**index.wxss**/
+.search {
+  width: 100%;
+  background-color: #1E90FF;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
+.search .search-item {
+  width: 85%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  background-color: #F0FFFF;
+}
+.search image {
+  width: 7%;
+  height: 60%;
+  padding: 0 20rpx;
+}
+.search input {
+  height: 60%;
+  color: gray;
+}
+.music-list{
+  width: 95%;
+  margin: 0 auto;
+ margin-top: 120rpx;
+}
+.music-list .list-item{
+padding: 15rpx 0;
+border-bottom: 2rpx solid gainsboro;
+display: flex;
+flex-direction: column;
+}
+.music-list .list-item text:nth-child(1){
+  font-size: 30rpx;
+}
+.music-list .list-item text:nth-child(2){
+  font-size: 27rpx;
+  color: gray;
+  padding: 10rpx 0;
+}
+.music-list1{
+  display: flex;
+  justify-content: center;
+}
+.music-list1 image{
+  width: 500rpx;
+  height: 600rpx;
+  margin-top: 350rpx;
+}

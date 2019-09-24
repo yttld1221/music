@@ -1,0 +1,26 @@
+<!--pages/detail/detail.wxml-->
+<audio class='bf' src="{{src}}" id="myAudio"></audio>
+<view>
+  <image class='bg' src='{{music.pic}}'></image>
+</view>
+<view class='main'>
+  <text class='gc'>{{gc}}</text>
+  <image class='main-img' src='{{music.pic}}'></image>
+  <view class='main-item'>
+    <text>{{music.name}}</text>
+    <text bindtap='search_singer' data-singer='{{music.singer}}'>{{music.singer}} ></text>
+  </view>
+</view>
+<view class='play'>
+  <image src='../../image/prev.png' bindtap='prev_song'></image>
+  <image wx:if="{{!tag}}" src='../../image/play.png' class='play-item' bindtap='play_song'></image>
+  <image wx:if="{{tag}}" src='../../image/stop.png' class='play-item' bindtap='stop_song'></image>
+  <image src='../../image/next.png' bindtap='next_song'></image>
+</view>
+<view class='foot'>
+<image wx:if="{{!play_state}}" src='../../image/dq.png'></image>
+<image wx:if="{{!play_state}}" src='../../image/xh.png'></image>
+<view class='slider'>
+  {{showTime1}}<slider bindchange='sliderChange' activeColor='red' block-size="12" value='{{audioTime}}' />{{showTime2}}
+</view>
+</view>

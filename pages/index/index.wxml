@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<loading hidden="{{hidden}}">
+        加载中...
+</loading>
+<view class='search'>
+<view class='search-item'>
+<image src='../../image/search.png'></image>
+<input class='search-input' placeholder='请输入歌手或歌曲名' bindinput ="get_value">
+</input>
+</view>
+</view>
+<scroll-view
+    scroll-y
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+  >
+<view wx:if="{{tag}}" class='music-list' >
+<view class='list-item' wx:for="{{musiclist}}" bindtap='to_detail' data-id='{{index}}'>
+<text>{{item.name}}</text>
+<text>{{item.singer}}</text>
+</view>
+</view>
+
+<view wx:else="{{!tag}}" class='music-list1'>
+<image src='../../image/bg.png'></image>
+</view>
+</scroll-view>

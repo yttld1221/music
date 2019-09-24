@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/singer/singer"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1E90FF",
+    "navigationBarTitleText": "亦伶听",
+    "navigationBarTextStyle":"black"
+  }
+}

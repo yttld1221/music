@@ -1,0 +1,24 @@
+<!--pages/singer/singer.wxml-->
+<loading hidden="{{hidden}}">
+        加载中...
+</loading>
+<view class='bg-con'>
+  <image class='bg' src='{{music_src}}'></image>
+  <image src='{{music_src}}' class='bg-item'></image>
+  <text>李荣浩</text>
+</view>
+<scroll-view
+    scroll-y
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+  >
+<view class='music-list' >
+<view class='list-item' wx:for="{{musiclist}}" bindtap='to_detail' data-id='{{index}}'>
+<text>{{item.name}}</text>
+<text>{{item.singer}}</text>
+</view>
+</view>
+</scroll-view>
